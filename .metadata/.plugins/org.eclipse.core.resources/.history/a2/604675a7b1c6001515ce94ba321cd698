@@ -1,0 +1,6 @@
+package com.ssribeiro.Ed;
+
+public class Ed {
+	//
+	private String teste;
+}

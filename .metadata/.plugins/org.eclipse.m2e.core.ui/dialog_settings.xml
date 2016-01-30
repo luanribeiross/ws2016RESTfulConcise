@@ -48,6 +48,23 @@
 			<item value="[name]"/>
 		</list>
 	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="com.ssribeiro.orlaInventario"/>
+			<item value="com.ssribeiro.Ed"/>
+		</list>
+		<list key="name">
+			<item value="RESTful WebService of OrlaInventario app"/>
+			<item value="Ed"/>
+		</list>
+		<list key="artifactId">
+			<item value="WSOrlaInventario"/>
+			<item value="Ed"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
 			<item value="C:\Users\Luan\Documents\GitHub\ws2016RESTfulConcise"/>
@@ -63,12 +80,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.ssribeiro.Ed"/>
 			<item value="com.igrejadaorla.WSOrlaInventario"/>
 		</list>
 		<list key="groupId">
+			<item value="com.ssribeiro"/>
 			<item value="com.igrejadaorla"/>
 		</list>
 		<list key="artifactId">
+			<item value="Ed"/>
 			<item value="WSOrlaInventario"/>
 		</list>
 		<list key="projectNameTemplate">

@@ -1,0 +1,36 @@
+package com.ssribeiro.Ed;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
+
+/**
+ * An RESTful WebService.
+ * Purpose: Link many methods, services and applications.
+ * Deal with many requests. 
+ * 
+ * @author LuanSSRibeiro
+ *
+ */
+@Path("/ed")
+public class Ed {
+	
+	/**
+	 * Says Hello!
+	 * Return a simple response to tell its running
+	 */
+	@GET
+    @Path("/hello")
+    @Produces(MediaType.APPLICATION_JSON) 
+	public String hello(){
+		return null;
+	}
+	
+	@SuppressWarnings("unused")
+	private String ansUnknown() {
+		// TODO Auto-generated method stub
+		return "";
+	}
+}

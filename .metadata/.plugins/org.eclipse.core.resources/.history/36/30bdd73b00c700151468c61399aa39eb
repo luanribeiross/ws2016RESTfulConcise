@@ -1,0 +1,5 @@
+package com.ssribeiro.orlainventario;
+
+public class UsuarioDAO {
+
+}

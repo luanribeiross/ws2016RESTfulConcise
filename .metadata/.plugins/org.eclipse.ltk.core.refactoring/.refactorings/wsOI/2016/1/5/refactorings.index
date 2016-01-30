@@ -1,0 +1,5 @@
+1454119637336	Move 'beans.xml' to 'lib'
+1454119642093	Move 'beans.xml' to 'WEB-INF'
+1454119648124	Move 'index.xhtml' to 'WEB-INF'
+1454119659049	Move 'index.xhtml' to 'WebContent'
+1454119999633	Rename type 'WSOrlaInventario'

@@ -1,0 +1,20 @@
+package com.ssribeiro.orlainventario.WSOrlaInventario;
+
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+@ApplicationScoped
+@ManagedBean
+public class RestClient {
+	
+	public String call() {
+		Client client = ClientBuilder.newClient();
+		
+		Usuario usr = client.target("http://localhost:8080/WSOrlaInventario/ws/res/getUsuario").request().get(Usuario.class);
+		
+		return usr.toString();
+	}
+	
+}

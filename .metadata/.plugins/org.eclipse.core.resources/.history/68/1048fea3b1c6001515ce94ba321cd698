@@ -1,0 +1,5 @@
+package com.ssribeiro.Ed;
+//Parameters
+public class Constant {
+	public static String cte = "cte";
+}

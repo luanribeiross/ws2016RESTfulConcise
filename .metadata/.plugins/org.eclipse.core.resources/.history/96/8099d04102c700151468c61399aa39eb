@@ -1,0 +1,29 @@
+package com.ssribeiro.orlainventario;
+
+import javax.ws.rs.DefaultValue;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Application;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+@Path("/usuario")
+public class UsuarioDAO extends Application {
+	
+	@GET
+	@Path("/getEcho")
+	public Response getEcho(@QueryParam("msg") String msg) {
+		return Response.ok("Just Said: '"+msg+"'").build();
+	}
+	
+	@GET
+	@Path("/getUsuario")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Usuario getUsuario(@DefaultValue()@QueryParam("id") int id) {
+		
+		return new Usuario(id, "luan", "lu@nomind.com", "pass", "thetime");
+	}
+	
+}

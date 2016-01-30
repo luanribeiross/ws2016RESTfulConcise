@@ -1,0 +1,46 @@
+package com.ssribeiro.Ed;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+/**
+ * An RESTful WebService.
+ * Purpose: Link many methods, services and applications.
+ * Deal with many requests. 
+ * 
+ * @author LuanSSRibeiro
+ *
+ */
+@Path("/ed")
+public class Ed {
+	
+	/**
+	 * Deals with the request.
+	 * If unknown, let the client know.
+	 * 
+	 * @param whatToDo
+	 */
+	@GET
+    @Path("/dothat")
+    @Produces(MediaType.APPLICATION_JSON) 
+	public void doThat(String whatToDo){
+		switch (whatToDo) {
+		case "":
+			ansUnknown();
+        	break;
+		case "WSOrlaInventario":
+			WSOrlaInventario.
+			break;
+        default: 
+        	return ansUnknown();
+        	break;
+		}	
+	}
+	
+	private String ansUnknown() {
+		// TODO Auto-generated method stub
+		return "";
+	}
+}

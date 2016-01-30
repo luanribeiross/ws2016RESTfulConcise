@@ -1,0 +1,6 @@
+package com.ssribeiro.orlainventario;
+
+public class Const {
+	public final static String NOT_DEFINED = "-1";
+	public final static int NOT_DEFINED_INT = -1;
+}

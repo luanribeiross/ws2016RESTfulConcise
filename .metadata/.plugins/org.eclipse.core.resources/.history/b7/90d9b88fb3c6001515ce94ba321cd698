@@ -1,0 +1,14 @@
+package com.ssribeiro.Ed;
+
+/**
+ * An RESTful WebService.
+ * Purpose: Link many methods, services and applications.
+ * Deal with many requests. 
+ * 
+ * @author LuanSSRibeiro
+ *
+ */
+
+public class Ed {
+	//
+}

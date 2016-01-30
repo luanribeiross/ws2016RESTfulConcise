@@ -1,0 +1,90 @@
+package com.ssribeiro.orlainventario;
+
+import java.io.IOException;
+import java.io.Reader;
+import java.util.ArrayList;
+
+import org.glassfish.jersey.jackson.*;
+import javax.json.Json;
+import javax.json.stream.JsonParser;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Application;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.eclipse.persistence.internal.oxm.ObjectBuilder;
+
+import com.fasterxml.jackson.core.io.SerializedString;
+import com.sun.corba.se.impl.javax.rmi.CORBA.Util;
+import com.sun.tools.ws.resources.UtilMessages;
+
+import jdk.nashorn.internal.runtime.JSONFunctions;
+
+@Path("/usuario")
+public class UsuarioDAO extends Application {
+	
+	@GET
+	@Path("/add")
+	@Produces(MediaType.APPLICATION_JSON)
+	public int add(@QueryParam("nome") String nome, 
+			@QueryParam("email") String email, @QueryParam("senha") String senha) {
+		int id = -1;
+		
+		//TODO: Resolve that
+		Usuario usuario = new Usuario(0, nome, email, senha, "");
+		
+		return id;
+	}
+	
+	@GET
+	@Path("/getAll")
+	@Produces(MediaType.APPLICATION_JSON)
+	public ArrayList<Usuario> getAll() {
+		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+		
+		//TODO: Resolve that
+		usuarios.add(new Usuario(1, "luan", "lu@nomind.com", "pass", "thetime"));
+		usuarios.add(new Usuario(2, "lethícia", "le@nomind.com", "pass2", "thetime2"));
+		
+		return usuarios;
+	}
+	
+	@GET
+	@Path("/get")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Usuario get(@QueryParam("id") int id) {
+		
+		//TODO: Resolve that
+		Usuario usuario = new Usuario(id, "luan", "lu@nomind.com", "pass", "thetime");
+		
+		return usuario;
+	}
+	
+	@GET
+	@Path("/update")
+	@Consumes("text/json")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Usuario update(@QueryParam("usuario") String usr) {
+		int rt = -1;
+		
+		Usuario usuario;
+		try {
+			usuario = new ObjectMapper().readValue(usr, Usuario.class);
+		} catch (Exception e) {
+			
+		}
+				
+		//TODO: Resolve that
+		//Usuario usuario = new Usuario(id, nome, email, senha, "thetime");
+		
+		return usuario;
+	}
+	
+}

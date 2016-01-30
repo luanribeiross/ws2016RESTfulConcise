@@ -1,0 +1,34 @@
+package com.ssribeiro.orlainventario;
+
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+import com.sun.mail.iap.Response;
+
+@ApplicationScoped
+@ManagedBean
+public class RestClient {
+	
+	private String user;
+	
+	public String call() {
+		Client client = ClientBuilder.newClient();
+		
+		Usuario usr = client.target("http://localhost:8080/wsOI/WsOI/res/getUsuario").request().get(Usuario.class);
+		
+		user = usr.toString();
+		
+		System.out.println(usr);
+		
+		return "<script>document.getElementById(\"1\").innerHTML = \""
+				+usr.toString()+"\"</script>";
+		
+	}
+	
+	public String getUser(){
+		return this.user;
+	}
+	
+}

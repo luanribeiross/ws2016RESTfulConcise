@@ -1,0 +1,37 @@
+package com.ssribeiro.orlainventario;
+
+import java.util.ArrayList;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Application;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+@Path("/usuario")
+public class UsuarioDAO extends Application {
+	
+	@GET
+	@Path("/getAll")
+	@Produces(MediaType.APPLICATION_JSON)
+	public ArrayList<Usuario> getUsuarios() {
+		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+		
+		usuarios.add(new Usuario(1, "luan", "lu@nomind.com", "pass", "thetime"));
+		usuarios.add(new Usuario(2, "lethícia", "le@nomind.com", "pass2", "thetime2"));
+		
+		return usuarios;
+	}
+	
+	@GET
+	@Path("/getUsuario")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Usuario getUsuarios(@QueryParam("id") int id) {
+		Usuario usuario = new Usuario(id, "luan", "lu@nomind.com", "pass", "thetime");
+		
+		return usuario;
+	}
+	
+}
