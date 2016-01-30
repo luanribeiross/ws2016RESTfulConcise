@@ -33,4 +33,6 @@
 <fullyQualifiedTypeName name="com.fasterxml.jackson.core.io.SerializedString"/>
 <fullyQualifiedTypeName name="org.codehaus.jackson.map.ObjectMapper"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.ssribeiro.orlainventario.entity.Usuario"/>
 </qualifiedTypeNameHistroy>

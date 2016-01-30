@@ -2,7 +2,9 @@ package com.ssribeiro.orlainventario;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -12,6 +14,9 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.MediaType;
 import org.codehaus.jackson.map.ObjectMapper;
+
+import com.ssribeiro.orlainventario.entity.Usuario;
+
 
 @Path("/usuario")
 public class UsuarioDAO extends Application {
@@ -32,7 +37,7 @@ public class UsuarioDAO extends Application {
 		}
 		
 		//TODO: Resolve that
-		Usuario usuario = new Usuario(0, nome, email, senha, "");
+		Usuario usuario = new Usuario();
 		
 		return id;
 	}
@@ -44,8 +49,20 @@ public class UsuarioDAO extends Application {
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
 		
 		//TODO: Resolve that
-		usuarios.add(new Usuario(1, "luan", "lu@nomind.com", "pass", "thetime"));
-		usuarios.add(new Usuario(2, "lethícia", "le@nomind.com", "pass2", "thetime2"));
+		Usuario usr = new Usuario();
+		usr.setId(1);
+		usr.setNome("luan");
+		usr.setEmail("lu@nomind.com");
+		usr.setSenha("pass");
+		usr.setDataCadastro(new Timestamp(Timestamp.parse(new Date().toString())));
+		usuarios.add(usr);
+		usr = new Usuario();
+		usr.setId(2);
+		usr.setNome("maria");
+		usr.setEmail("ma@nomind.com");
+		usr.setSenha("pass2");
+		usr.setDataCadastro(new Timestamp(Timestamp.parse(new Date().toString())));
+		usuarios.add(usr);
 		
 		return usuarios;
 	}
@@ -56,9 +73,14 @@ public class UsuarioDAO extends Application {
 	public Usuario get(@QueryParam("id") int id) {
 		
 		//TODO: Resolve that
-		Usuario usuario = new Usuario(id, "luan", "lu@nomind.com", "pass", "thetime");
+		Usuario usr = new Usuario();
+		usr.setId(1);
+		usr.setNome("luan");
+		usr.setEmail("lu@nomind.com");
+		usr.setSenha("pass");
+		usr.setDataCadastro(new Timestamp(Timestamp.parse(new Date().toString())));
 		
-		return usuario;
+		return usr;
 	}
 	
 	@GET
@@ -84,7 +106,12 @@ public class UsuarioDAO extends Application {
 	public int delete (@QueryParam("id") int id) {
 		int rt = Const.NOT_DEFINED_INT;
 		//TODO: Resolve that
-		Usuario usuario = new Usuario(id, "luan", "lu@nomind.com", "pass", "thetime");
+		Usuario usr = new Usuario();
+		usr.setId(1);
+		usr.setNome("luan");
+		usr.setEmail("lu@nomind.com");
+		usr.setSenha("pass");
+		usr.setDataCadastro(new Timestamp(Timestamp.parse(new Date().toString())));
 		
 		return rt;
 	}

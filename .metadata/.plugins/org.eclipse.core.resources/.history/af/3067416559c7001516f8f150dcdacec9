@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="wsOI">
+		<class>com.ssribeiro.orlainventario.entity.Area</class>
+		<class>com.ssribeiro.orlainventario.entity.Estoque</class>
+		<class>com.ssribeiro.orlainventario.entity.Item</class>
+		<class>com.ssribeiro.orlainventario.entity.Local</class>
+		<class>com.ssribeiro.orlainventario.entity.Task</class>
+		<class>com.ssribeiro.orlainventario.entity.UltimoLogin</class>
+		<class>com.ssribeiro.orlainventario.entity.Usuario</class>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,92 @@
+package com.ssribeiro.orlainventario;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Application;
+import javax.ws.rs.core.MediaType;
+import org.codehaus.jackson.map.ObjectMapper;
+
+@Path("/usuario")
+public class UsuarioDAO extends Application {
+	
+	@GET
+	@Path("/add")
+	@Produces(MediaType.APPLICATION_JSON)
+	public int add(@QueryParam("nome") String nome, 
+			@QueryParam("email") String email, @QueryParam("senha") String senha) {
+		int id = Const.NOT_DEFINED_INT;
+		
+		Connection conn = Connector.get();
+		try {
+			conn.prepareStatement("");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//TODO: Resolve that
+		Usuario usuario = new Usuario(0, nome, email, senha, "");
+		
+		return id;
+	}
+	
+	@GET
+	@Path("/getAll")
+	@Produces(MediaType.APPLICATION_JSON)
+	public ArrayList<Usuario> getAll() {
+		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+		
+		//TODO: Resolve that
+		usuarios.add(new Usuario(1, "luan", "lu@nomind.com", "pass", "thetime"));
+		usuarios.add(new Usuario(2, "lethícia", "le@nomind.com", "pass2", "thetime2"));
+		
+		return usuarios;
+	}
+	
+	@GET
+	@Path("/get")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Usuario get(@QueryParam("id") int id) {
+		
+		//TODO: Resolve that
+		Usuario usuario = new Usuario(id, "luan", "lu@nomind.com", "pass", "thetime");
+		
+		return usuario;
+	}
+	
+	@GET
+	@Path("/update")
+	@Consumes("text/json")
+	@Produces(MediaType.APPLICATION_JSON)
+	public int update(@QueryParam("usuario") String usr) {
+		int rt = Const.NOT_DEFINED_INT;
+		Usuario usuario = new Usuario();
+		try {
+			usuario = new ObjectMapper().readValue(usr, Usuario.class);
+			//TODO: Resolve that
+			
+			return rt;
+		} catch (Exception e) {
+			return rt;
+		}
+	}
+	
+	@GET
+	@Path("/delete")
+	@Produces(MediaType.APPLICATION_JSON)
+	public int delete (@QueryParam("id") int id) {
+		int rt = Const.NOT_DEFINED_INT;
+		//TODO: Resolve that
+		Usuario usuario = new Usuario(id, "luan", "lu@nomind.com", "pass", "thetime");
+		
+		return rt;
+	}
+	
+}

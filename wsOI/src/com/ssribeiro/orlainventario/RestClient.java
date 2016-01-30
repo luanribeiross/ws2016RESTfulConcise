@@ -5,6 +5,8 @@ import javax.faces.bean.ManagedBean;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 
+import com.ssribeiro.orlainventario.entity.Usuario;
+
 @ApplicationScoped
 @ManagedBean
 public class RestClient {

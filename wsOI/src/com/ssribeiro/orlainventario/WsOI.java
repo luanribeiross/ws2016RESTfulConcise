@@ -1,5 +1,8 @@
 package com.ssribeiro.orlainventario;
 
+import java.sql.Timestamp;
+import java.util.Date;
+
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -8,6 +11,8 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import com.ssribeiro.orlainventario.entity.Usuario;
 
 @Path("/utils")
 @ApplicationPath("/data")
@@ -25,11 +30,18 @@ public class WsOI extends Application {
 		return Response.ok("Just Said: '"+msg+"'").build();
 	}
 	
+	@SuppressWarnings("deprecation")
 	@GET
 	@Path("/getSample")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Usuario getSample() {
-		return new Usuario(1, "luan", "lu@nomind.com", "pass", "thetime");
+		Usuario usr = new Usuario();
+		usr.setId(1);
+		usr.setNome("luan");
+		usr.setEmail("lu@nomind.com");
+		usr.setSenha("pass");
+		usr.setDataCadastro(new Timestamp(Timestamp.parse(new Date().toString())));
+		return usr;
 	}
 	
 }

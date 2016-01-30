@@ -807,3 +807,18 @@
 2016-01-30 09:53:37,201 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Luan\Documents\GitHub\ws2016RESTfulConcise\Ed\src\main\resources
 2016-01-30 09:53:37,207 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-01-30 09:53:37,214 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Luan\Documents\GitHub\ws2016RESTfulConcise\Ed\src\test\resources
+2016-01-30 10:00:02,290 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-01-30 10:00:02,302 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Luan\Documents\GitHub\ws2016RESTfulConcise\Ed\src\main\resources
+2016-01-30 10:00:02,307 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-01-30 10:00:02,315 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Luan\Documents\GitHub\ws2016RESTfulConcise\Ed\src\test\resources
+2016-01-30 10:07:09,069 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-01-30 10:13:57,205 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-01-30 10:13:57,224 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Luan\Documents\GitHub\ws2016RESTfulConcise\Ed\src\main\resources
+2016-01-30 10:13:57,238 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-01-30 10:13:57,247 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Luan\Documents\GitHub\ws2016RESTfulConcise\Ed\src\test\resources
+2016-01-30 10:17:01,979 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-01-30 13:20:55,811 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-01-30 13:20:55,856 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Luan\Documents\GitHub\ws2016RESTfulConcise\Ed\src\main\resources
+2016-01-30 13:20:55,863 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-01-30 13:20:55,879 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Luan\Documents\GitHub\ws2016RESTfulConcise\Ed\src\test\resources
+2016-01-30 13:21:11,667 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
